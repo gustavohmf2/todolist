@@ -1,0 +1,16 @@
+*.class
+
+# Package Files
+
+*.war
+*.jar
+
+# build file
+
+target/
+
+# IntelliJ files
+
+**/*.iml
+**/.ideia
+**/.gradle
