@@ -4,4 +4,6 @@ spring:
     username: root
     password:
     driver: com.mysql.jdbc.Driver
-
+  jpa:
+    hibernate:
+      ddl-auto: update

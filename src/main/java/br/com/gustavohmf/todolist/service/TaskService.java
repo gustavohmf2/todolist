@@ -13,5 +13,5 @@ public interface TaskService {
 
     public Task save(Task task);
 
-    public void remove(Task task);
+    public void remove(Long id);
 }

@@ -2,6 +2,14 @@ package br.com.gustavohmf.todolist.utils;
 
 import java.util.List;
 
+
+/**
+ *
+ * Represents thar response to api requests
+ * @param <T> target class
+ *
+ * Gustavo Henrique Miguel Ferreira
+ */
 public class Response <T> {
 
     private T data;

@@ -1,0 +1,35 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>todos</h1>
+    <input class="new-todo" placeholder="What needs to be done?" autofocus="" (keyup.enter)="newTask(title.value)" #title>
+  </header>
+  <section class="main" [style.display]="taskList != null" >
+    <input class="toggle-all" type="checkbox">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul class="todo-list">
+        <li *ngFor="let task of taskList;let i = index;" [class.completed]="task.completed">
+          <div class="view">
+            <input class="toggle" type="checkbox"  (change)="update(task)">
+            <label>{{task.title}}</label>
+            <button class="destroy" (click)="remove(task, i)"></button>
+          </div>
+          <input class="edit">
+      </li>
+    </ul>
+  </section>
+  <footer class="footer">
+    <span class="todo-count"><strong>{{taskList?taskList.lenght:0}}</strong> items left</span>
+    <ul class="filters">
+      <li>
+        <a href="#/" class="selected" (click)="orderDefault()">All</a>
+      </li>
+      <li>
+        <a href="#/active" (click)="orderByActive()">Active</a>
+      </li>
+      <li>
+        <a href="#/completed" (click)="orderByCompleted()">Completed</a>
+      </li>
+    </ul>
+    <button class="clear-completed" (click)="removeAllCompleted()">Clear completed</button>
+  </footer>
+</section>
